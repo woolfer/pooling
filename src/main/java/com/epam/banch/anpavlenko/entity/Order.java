@@ -1,9 +1,7 @@
 package com.epam.banch.anpavlenko.entity;
 
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -22,7 +20,6 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "ORDERS")
-@Getter @Setter
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
@@ -36,6 +33,38 @@ public class Order implements Serializable {
   private String name;
   private String surName;
   @NotNull
-  private Date orderCreated;
+  private Date createdDate;
   private BigInteger sum;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getSurName() {
+    return surName;
+  }
+
+  public void setSurName(String surName) {
+    this.surName = surName;
+  }
+
+  public Date getCreatedDate() {
+    return createdDate;
+  }
+
+  public void setCreatedDate(Date orderCreated) {
+    this.createdDate = orderCreated;
+  }
+
+  public BigInteger getSum() {
+    return sum;
+  }
+
+  public void setSum(BigInteger sum) {
+    this.sum = sum;
+  }
 }
