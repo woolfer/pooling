@@ -1,0 +1,6 @@
+com\epam\banch\anpavlenko\repository\OrderRepository.class
+MainController.class
+com\epam\banch\anpavlenko\config\CustomWebMvcConfiguration.class
+com\epam\banch\anpavlenko\config\SpringConfig.class
+com\epam\banch\anpavlenko\entity\Order.class
+com\epam\banch\anpavlenko\controller\OrderController.class
