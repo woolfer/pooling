@@ -1,6 +1,4 @@
-/**
- * @author an.pavlenko
- */
+package com.epam.banch.anpavlenko;
 
 import java.nio.file.StandardWatchEventKinds;
 import java.util.concurrent.TimeUnit;
@@ -25,6 +23,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.epam.banch.anpavlenko.service.DiskFilePathMonitoringService;
 
+/**
+ * @author an.pavlenko
+ */
 @Controller
 @EntityScan(basePackages = {"com.epam.banch.anpavlenko.entity"})
 @ComponentScan({"com.epam.banch.anpavlenko.controller", "com.epam.banch.anpavlenko.service", "com.epam.banch.anpavlenko.converter"})
