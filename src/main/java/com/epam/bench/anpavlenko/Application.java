@@ -2,6 +2,7 @@ package com.epam.bench.anpavlenko;
 
 import java.nio.file.StandardWatchEventKinds;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.TimeUnit;
 
@@ -69,7 +70,7 @@ public class Application extends SpringBootServletInitializer {
   }
 
   @Bean(name = "queue")
-  public static SynchronousQueue<List<Order>> synchronousQueue() {
+  public static BlockingQueue<List<Order>> synchronousQueue() { //ArrayBlockingQueue or PriorityBlockingQueue
     return new SynchronousQueue<>();
   }
 

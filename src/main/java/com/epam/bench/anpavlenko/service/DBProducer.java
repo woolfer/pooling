@@ -1,7 +1,7 @@
 package com.epam.bench.anpavlenko.service;
 
 import java.util.List;
-import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.BlockingQueue;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public class DBProducer implements Runnable {
   private static final Logger LOG = LoggerFactory.getLogger(DBProducer.class);
 
   @Autowired
-  private SynchronousQueue queue;
+  private BlockingQueue queue;
 
   @Autowired
   private PreOrderService service;
