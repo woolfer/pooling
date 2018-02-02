@@ -18,7 +18,7 @@ public class OrderFactoryImpl implements OrderFactory {
   public Order createOrder(PreOrder preOrder) {
     Order order = new Order();
     order.setName(preOrder.getName());
-    order.setSurName(order.getSurName());
+    order.setSurName(preOrder.getSurName());
     order.setCreatedDate(preOrder.getCreatedDate() == null ? new Date() : preOrder.getCreatedDate());
     order.setSum(preOrder.getSum());
     return order;
