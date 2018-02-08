@@ -38,8 +38,10 @@ public class DBConsumer implements Runnable {
         preOrderList.stream().map(orderFactory::createOrder).forEach(orderService::createOrder);
         preOrderList.stream().peek(preOrder -> preOrder.setChecked(true)).forEach(preOrderService::updateOrder);
       }
+      //TODO hope by putting Thread.sleep at the  end of DBConsumer service and at the begining of DBProducer service you are not trying to get some kind of syncronization of this two thread.
       Thread.sleep(timeout);
     } catch (InterruptedException e) {
+      //TODO again you have logger but using printstacktrace
       e.printStackTrace();
     }
   }

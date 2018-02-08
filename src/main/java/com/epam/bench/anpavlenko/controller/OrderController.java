@@ -25,6 +25,7 @@ public class OrderController {
     return orderService.getAll();
   }
 
+  //TODO stop creating new orders, preorders. You producecopypaste. Crete util class forthat
   @RequestMapping("/create") //I know that it's not correct but it was added to fast order creation, just to test!!!
   public void create(@RequestParam String name) {
     Order order = new Order();

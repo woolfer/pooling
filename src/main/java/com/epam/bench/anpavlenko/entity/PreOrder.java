@@ -17,6 +17,8 @@ import javax.validation.constraints.NotNull;
 /**
  * @author an.pavlenko
  */
+
+//TODO not really sure why do you need PreOrder, entity which have 95% same fields as. How about just create one entity Order and constraint to table order_checks. You will make rediculus amount of data duplcation @see https://uk.wikipedia.org/wiki/Нормалізація_баз_даних up to 3rd form.
 @Entity
 @Table(name = "PRE_ORDERS")
 @NoArgsConstructor

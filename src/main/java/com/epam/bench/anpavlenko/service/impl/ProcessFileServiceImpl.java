@@ -36,9 +36,11 @@ public class ProcessFileServiceImpl implements ProcessFileService {
         LOG.debug("Creating the order from file {}", file.getAbsoluteFile());
         csvService.parseCSVToOrder(file).forEach(orderService::createOrder);
       } catch (FileNotFoundException e) {
+        //TODO you have logger but using printstacktrace ?????
         e.printStackTrace();
       }
     }
+    //TODO log message if file was not processed?
   }
 
 }

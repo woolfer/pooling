@@ -19,6 +19,7 @@ public class OrderFactoryImplTest {
 
   @Test
   public void testCreateOrder() {
+    //TODO Frankly saying I'm already hate new Order
     PreOrder preOrder = new PreOrder();
     preOrder.setName("name");
     preOrder.setSurName("surName");
@@ -36,6 +37,7 @@ public class OrderFactoryImplTest {
   @Test
   public void testCreateOrder_createdDateIsNull() {
 
+    //TODO useless in case you will eliminate preorder
     Order order = orderFactory.createOrder(new PreOrder());
 
     Assert.assertNotNull("Created date should not be null", order.getCreatedDate());

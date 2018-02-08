@@ -6,6 +6,7 @@ import com.epam.bench.anpavlenko.entity.PreOrder;
 /**
  * @author an.pavlenko
  */
+//TODO see implementation comments
 public interface OrderFactory {
 
   Order createOrder(PreOrder preOrder);

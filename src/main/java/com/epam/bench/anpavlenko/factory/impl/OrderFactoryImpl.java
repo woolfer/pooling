@@ -11,6 +11,7 @@ import com.epam.bench.anpavlenko.factory.OrderFactory;
 /**
  * @author an.pavlenko
  */
+//TODO it is not factory nor factory method. more looks like builder, but I will again ask you a question why do you need to do so much new Order in your code. Move it to separate util class it doesn't deserve to be a separate service.
 @Service
 public class OrderFactoryImpl implements OrderFactory {
 

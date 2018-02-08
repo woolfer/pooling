@@ -48,6 +48,7 @@ public class DiskFilePathMonitoringService implements Runnable {
       WatchKey watchKey = dir.register(watchService, event);
       keys.put(watchKey, dir);
     } catch (IOException e) {
+      //TODO again you have logger but using printstacktrace
       e.printStackTrace();
     }
   }
