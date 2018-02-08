@@ -14,6 +14,7 @@ import com.opencsv.bean.CsvDate;
 /**
  * @author an.pavlenko
  */
+//TODO No need to use Pojo, thus no need to create converter.
 @Service("orderConverter")
 public class OrderConverterImpl implements POJOConverter<Order, OrderConverterImpl.OrderPOJO> {
 
@@ -22,8 +23,10 @@ public class OrderConverterImpl implements POJOConverter<Order, OrderConverterIm
     return pojos.stream().map(this::convertPOJO).collect(Collectors.toList());
   }
 
+  //TODO stop creating new orders, preorders. You producecopypaste. Crete util class forthat
   @Override
   public Order convertPOJO(OrderPOJO pojo) {
+
     Order order = new Order();
     order.setName(pojo.getName());
     order.setSurName(pojo.getSurName());
@@ -32,6 +35,7 @@ public class OrderConverterImpl implements POJOConverter<Order, OrderConverterIm
     return order;
   }
 
+  //TODO Why have you created Pojo class. Isn't order enough for your purposes. It's fully copy fields of Order
   public static class OrderPOJO {
     @CsvBindByName(required = true)
     private String name;

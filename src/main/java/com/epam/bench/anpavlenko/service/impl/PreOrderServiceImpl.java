@@ -14,6 +14,7 @@ import com.epam.bench.anpavlenko.service.PreOrderService;
 /**
  * @author an.pavlenko
  */
+//TODO see comments to OrderService
 @Service
 public class PreOrderServiceImpl implements PreOrderService {
 

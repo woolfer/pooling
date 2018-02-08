@@ -32,6 +32,7 @@ public class DBProducer implements Runnable {
   public void run() {
     while (true) {
       try {
+        //TODO hope by putting Thread.sleep at the  end of DBConsumer service and at the begining of DBProducer service you are not trying to get some kind of syncronization of this two thread.
         Thread.sleep(timeout);
         LOG.debug("Producer waked up");
         List<PreOrder> uncheckedOrder = service.getUncheckedOrder();
@@ -40,6 +41,7 @@ public class DBProducer implements Runnable {
           queue.put(uncheckedOrder);
         }
       } catch (InterruptedException e) {
+        //TODO again you have logger but using printstacktrace
         e.printStackTrace();
       }
     }

@@ -37,6 +37,7 @@ public class OrderRepositoryIntegrationTest {
   @Autowired
   private OrderRepository repository;
 
+  //TODO empty?
   @Before
   public void init() {
 
@@ -44,6 +45,7 @@ public class OrderRepositoryIntegrationTest {
 
   @After
   public void clearDb() {
+    //TODO better do it in before
     repository.deleteAll();
   }
 
@@ -60,6 +62,7 @@ public class OrderRepositoryIntegrationTest {
 
   @Test
   public void testSave() {
+    //TODO seriously? new Order?
     Order newOrder = new Order();
     newOrder.setName("Don");
     newOrder.setSurName("Jon");
@@ -76,12 +79,13 @@ public class OrderRepositoryIntegrationTest {
   }
 
   @Test
-  public void testSave_existEntity() {
+  public void testSave_existEntity() { //TODO c++ naming style?
     String newSurName = "Bond";
     String newName = "James";
     BigInteger newSum = BigInteger.valueOf(1234L);
     Date newDate = new Date(1224455662);
 
+    //TODO you now what I'm going to sey here
     Order order = new Order();
     order.setName("Alex");
     order.setSurName("Petrosyan");
@@ -110,12 +114,14 @@ public class OrderRepositoryIntegrationTest {
     entityManager.flush();
     Order order = orderList.get(1);
 
+    //TODO It seems like you are testing functionality of Spring repositories. I can assure you, everything is working fine in it.
     Order result = repository.findOne(order.getId());
 
     Assert.assertEquals("Unexpected order", order, result);
   }
 
   private Collection<Order> prepareTestData() {
+    //TODO same stuff
     Order order1 = new Order();
     order1.setName("Vitalii");
     order1.setSurName("Pupkin");

@@ -10,6 +10,7 @@ import com.epam.bench.anpavlenko.entity.PreOrder;
 /**
  * @author an.pavlenko
  */
+//TODO see implementation comentsIf you will remove preorder entity it will also become useless
 @Repository
 public interface PreOrderRepository extends JpaRepository<PreOrder, Long> {
 

@@ -14,6 +14,7 @@ import com.epam.bench.anpavlenko.service.OrderService;
 /**
  * @author an.pavlenko
  */
+//TODO your service doing nothing you can use repository directly in @Controller
 @Service
 public class OrderServiceImpl implements OrderService {
 

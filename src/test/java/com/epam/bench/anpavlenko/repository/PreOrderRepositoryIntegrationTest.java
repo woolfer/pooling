@@ -35,6 +35,7 @@ public class PreOrderRepositoryIntegrationTest {
 
   @Test
   public void testFindByCheckedFalse() {
+    //TODO
     PreOrder order1 = new PreOrder();
     order1.setName("Vitalii");
     order1.setSurName("Pupkin");
@@ -42,6 +43,7 @@ public class PreOrderRepositoryIntegrationTest {
     order1.setSum(BigInteger.TEN);
     order1.setChecked(true);
 
+    //TODO
     PreOrder order2 = new PreOrder();
     order2.setName("Alex");
     order2.setSurName("Bond");
