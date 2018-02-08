@@ -48,7 +48,7 @@ public class DiskFilePathMonitoringService implements Runnable {
       WatchKey watchKey = dir.register(watchService, event);
       keys.put(watchKey, dir);
     } catch (IOException e) {
-      e.printStackTrace();
+      LOG.debug(e.getMessage());
     }
   }
 
@@ -82,7 +82,7 @@ public class DiskFilePathMonitoringService implements Runnable {
     try {
       processEvent();
     } catch (IOException e) {
-      e.printStackTrace();
+      LOG.debug(e.getMessage());
     }
   }
 }

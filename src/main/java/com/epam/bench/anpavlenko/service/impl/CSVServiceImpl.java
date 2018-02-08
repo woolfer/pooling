@@ -28,15 +28,15 @@ public class CSVServiceImpl implements CSVService {
 
   @Override
   public Collection<Order> parseCSVToOrder(String filePath) throws FileNotFoundException {
-    return parce(new FileReader(filePath));
+    return parse(new FileReader(filePath));
   }
 
   @Override
   public Collection<Order> parseCSVToOrder(File file) throws FileNotFoundException {
-    return parce(new FileReader(file));
+    return parse(new FileReader(file));
   }
 
-  private Collection<Order> parce(FileReader fileReader) {
+  private Collection<Order> parse(FileReader fileReader) {
     List orderList = new CsvToBeanBuilder(fileReader).withType(OrderConverterImpl.OrderPOJO.class).build().parse();
     return converter.convert(orderList);
   }

@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,11 +37,6 @@ public class OrderRepositoryIntegrationTest {
   private OrderRepository repository;
 
   @Before
-  public void init() {
-
-  }
-
-  @After
   public void clearDb() {
     repository.deleteAll();
   }

@@ -40,7 +40,7 @@ public class DBConsumer implements Runnable {
       }
       Thread.sleep(timeout);
     } catch (InterruptedException e) {
-      e.printStackTrace();
+      LOG.debug(e.getMessage());
     }
   }
 }

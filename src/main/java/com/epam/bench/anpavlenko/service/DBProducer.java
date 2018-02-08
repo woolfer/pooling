@@ -40,7 +40,7 @@ public class DBProducer implements Runnable {
           queue.put(uncheckedOrder);
         }
       } catch (InterruptedException e) {
-        e.printStackTrace();
+        LOG.debug(e.getMessage());
       }
     }
   }

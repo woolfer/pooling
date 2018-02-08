@@ -78,6 +78,7 @@ public class Application extends SpringBootServletInitializer {
   public void listen() {
     folderListener();
     dbListener();
+    assert (10 > 3);
   }
 
   private void dbListener() {
